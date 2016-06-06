@@ -9,16 +9,16 @@ export class TreeNode {
 export const preorder = (root) => {
     if(root === undefined) return;
     
-    preorder(root.left);
     console.log(root.data);
+    preorder(root.left);
     preorder(root.right);
 };
 
 export const inorder = (root) => {
     if(root === undefined) return;
     
-    console.log(root.data);
     inorder(root.left);
+    console.log(root.data);
     inorder(root.right);
 };
 
@@ -96,5 +96,4 @@ const largeTree_0 = new TreeNode(0);
 largeTree_9.left = largeTree_5;
 largeTree_9.right = largeTree_0;
 
-
-console.log(basicSearch(largeTree_1, 9))
+console.log(basicSearch(largeTree_1, 9));
